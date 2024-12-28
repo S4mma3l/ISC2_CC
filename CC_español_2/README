@@ -1,0 +1,102 @@
+# Web Course Analyzer
+
+Este proyecto permite interactuar con plataformas de aprendizaje en línea, facilitando la captura de contenido relevante y la generación de resúmenes, palabras clave y preguntas prácticas. Es útil para estudiantes que desean organizar información de cursos en herramientas como Obsidian.
+
+## Características principales
+
+1. Automatización de inicio de sesión y navegación en cursos con Selenium.
+2. Uso de cookies para evitar repetir inicios de sesión manuales.
+3. Extracción y procesamiento de contenido desde plataformas de aprendizaje.
+4. Generación de resúmenes, palabras clave y preguntas basadas en el contenido.
+5. Exportación de la información procesada en formato Markdown compatible con Obsidian.
+
+## Requisitos
+
+1. **Sistema operativo**: Windows, macOS o Linux.
+2. **Python**: Versión 3.8 o superior.
+3. **Navegador**: Mozilla Firefox.
+4. **Dependencias**: Instalar las dependencias listadas en la sección de instalación.
+
+## Instalación
+
+1. Clona este repositorio:
+
+   ```bash
+   git clone https://github.com/usuario/web-course-analyzer.git
+   cd web-course-analyzer
+   ```
+
+2. Instala las dependencias necesarias:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Asegúrate de que GeckoDriver esté instalado. El código utiliza `webdriver-manager` para gestionar automáticamente la instalación.
+
+## Dependencias
+
+- `selenium`: Para la automatización del navegador.
+- `webdriver-manager`: Para gestionar la instalación de GeckoDriver.
+- `pyperclip`: Para acceder al contenido del portapapeles.
+
+Puedes instalar estas dependencias manualmente si no deseas usar el archivo `requirements.txt`:
+
+```bash
+pip install selenium webdriver-manager pyperclip
+```
+
+## Uso
+
+1. Configura la URL de inicio de sesión y las URLs de los cursos en el archivo principal o en un archivo de configuración.
+2. Ejecuta el script principal:
+
+   ```bash
+   python main.py
+   ```
+
+3. Sigue las instrucciones en la consola para iniciar sesión manualmente (si es necesario) y capturar contenido de las páginas.
+
+4. Los resúmenes, palabras clave y preguntas se guardarán en un archivo Markdown (`course_summary.md`).
+
+## Archivos principales
+
+- `main.py`: Contiene el código principal de la aplicación.
+- `cookies.pkl`: Archivo para almacenar las cookies del navegador.
+- `course_summary.md`: Archivo generado con los resúmenes y preguntas.
+
+## Notas importantes
+
+- Asegúrate de que las URLs de los cursos sean accesibles con tus credenciales.
+- Para evitar problemas con cookies, no modifiques el archivo `cookies.pkl` manualmente.
+- El script no guarda contraseñas; las cookies almacenan tu sesión iniciada.
+
+## Contribución
+
+Si deseas contribuir, sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una rama para tu característica o corrección:
+
+   ```bash
+   git checkout -b nueva-caracteristica
+   ```
+
+3. Realiza los cambios y haz un commit:
+
+   ```bash
+   git commit -m "Agregada nueva característica"
+   ```
+
+4. Envía un pull request.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+---
+
+## Contacto
+
+Si tienes preguntas o problemas, abre un issue en el repositorio o contacta al autor.
+
